@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>블로그 — 화곡 셔츠룸 마포 힙플레이스 카페</title>
+    <meta name="description" content="화곡 셔츠룸 블로그: 스트리트 브루탈리즘과 마포 힙플레이스의 진짜 이야기. 지금 바로 읽어보세요.">
+    <meta name="keywords" content="화곡 셔츠룸, 마포 힙플레이스, 블로그, 카페, 마포 카페, 스트리트 브루탈리즘, 서울 힙카페, 브루탈리즘 카페">
+    <meta name="bpaas-design-system" content="brutalist-avantgarde">
+    <meta name="bpaas-design-theme" content="kr-neon-void">
+    <link rel="canonical" href="https://sf-t3-1779642675702-344.pages.dev/blog/">
+    <!-- Open Graph -->
+    <meta property="og:title" content="블로그 | 화곡 셔츠룸 마포 힙플레이스 카페">
+    <meta property="og:description" content="화곡 셔츠룸 블로그: 스트리트 브루탈리즘과 마포 힙플레이스의 진짜 이야기.">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://sf-t3-1779642675702-344.pages.dev/blog/">
+    <meta property="og:site_name" content="화곡 셔츠룸">
+    <meta property="og:locale" content="ko_KR">
+    <!-- CSS -->
+    <style>
+        /* ===== CORE DESIGN SYSTEM (brutalist-avantgarde / kr-neon-void) ===== */
+        :root {
+            --space-unit: 8px;
+            --spacing-xs: calc(var(--space-unit) * 1);
+            --spacing-sm: calc(var(--space-unit) * 2);
+            --spacing-md: calc(var(--space-unit) * 4);
+            --spacing-lg: calc(var(--space-unit) * 8);
+            --spacing-xl: calc(var(--space-unit) * 12);
+            --color-bg: #0a0a0a;
+            --color-bg-alt: #111111;
+            --color-text: #e0e0e0;
+            --color-text-muted: #888888;
+            --color-accent: #c0ff00;
+            --color-accent-dim: #6b8e00;
+            --color-border: #333333;
+            --color-header-bg: #0d0d0d;
+            --color-card-bg: #141414;
+            --font-body: 'Courier New', monospace;
+            --font-heading: 'Impact', 'Arial Black', sans-serif;
+            --border-thick: 4px solid var(--color-accent);
+            --shadow-hard: 8px 8px 0 rgba(192, 255, 0, 0.3);
+            --transition-fast: 0.15s cubic-bezier(0.25, 1, 0.5, 1);
+        }
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        html {
+            scroll-behavior: smooth;
+            font-size: 16px;
+        }
+        body {
+            font-family: var(--font-body);
+            background-color: var(--color-bg);
+            color: var(--color-text);
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+        }
+        a {
+            color: var(--color-accent);
+            text-decoration: none;
+            transition: opacity var(--transition-fast);
+        }
+        a:hover {
+            opacity: 0.7;
+        }
+        img {
+            max-width: 100%;
+            display: block;
+        }
+        /* ===== LAYOUT ===== */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 var(--spacing-md);
+        }
+        /* ===== HEADER ===== */
+        .header {
+            background-color: var(--color-header-bg);
+            border-bottom: var(--border-thick);
+            padding: var(--spacing-sm) 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        .header-inner {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .logo {
+            font-family: var(--font-heading);
+            font-size: 1.8rem;
+            color: var(--color-accent);
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+        .logo span {
+            color: var(--color-text);
+        }
+        .hamburger-menu {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            width: 44px;
+            height: 44px;
+            background: transparent;
+            border: 2px solid var(--color-accent);
+            cursor: pointer;
+            transition: background var(--transition-fast);
+        }
+        .hamburger-menu:hover {
+            background: var(--color-accent-dim);
+        }
+        .hamburger-menu .bar {
+            width: 24px;
+            height: 2px;
+            background: var(--color-accent);
+            margin: 4px 0;
+            transition: all var(--transition-fast);
+        }
+        /* 네비게이션은 오버레이 방식 (동일 유지) */
+        .nav-overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.95);
+            z-index: 200;
+            justify-content: center;
+            align-items: center;
+        }
+        .nav-overlay.active {
+            display: flex;
+        }
+        .nav-overlay ul {
+            list-style: none;
+            text-align: center;
+        }
+        .nav-overlay ul li {
+            margin: var(--spacing-md) 0;
+        }
+        .nav-overlay ul li a {
+            font-family: var(--font-heading);
+            font-size: 2rem;
+            color: var(--color-accent);
+            text-transform: uppercase;
+            letter-spacing: 4px;
+            padding: var(--spacing-sm) var(--spacing-md);
+            border: 2px solid transparent;
+            transition: border var(--transition-fast);
+        }
+        .nav-overlay ul li a:hover {
+            border-color: var(--color-accent);
+        }
+        .nav-close {
+            position: absolute;
+            top: var(--spacing-md);
+            right: var(--spacing-md);
+            background: none;
+            border: 2px solid var(--color-accent);
+            color: var(--color-accent);
+            font-size: 2rem;
+            width: 48px;
+            height: 48px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        /* ===== HERO SECTION ===== */
+        .hero {
+            padding: var(--spacing-xl) 0 var(--spacing-lg);
+            text-align: center;
+            border-bottom: 2px solid var(--color-border);
+        }
+        .hero h1 {
+            font-family: var(--font-heading);
+            font-size: clamp(2.5rem, 10vw, 5rem);
+            color: var(--color-accent);
+            text-transform: uppercase;
+            letter-spacing: 6px;
+            margin-bottom: var(--spacing-sm);
+            text-shadow: 4px 4px 0 rgba(0,0,0,0.8);
+        }
+        .hero p {
+            font-size: 1.2rem;
+            color: var(--color-text-muted);
+            max-width: 700px;
+            margin: 0 auto;
+        }
+        /* ===== BLOG POST SECTION ===== */
+        .blog-post {
+            padding: var(--spacing-lg) 0;
+        }
+        .blog-post .card {
+            background: var(--color-card-bg);
+            border: 2px solid var(--color-border);
+            padding: var(--spacing-lg);
+            margin-bottom: var(--spacing-lg);
+            box-shadow: var(--shadow-hard);
+        }
+        .blog-post .card h2 {
+            font-family: var(--font-heading);
+            font-size: 2rem;
+            color: var(--color-accent);
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: var(--spacing-sm);
+        }
+        .blog-post .card .meta {
+            font-size: 0.9rem;
+            color: var(--color-text-muted);
+            margin-bottom: var(--spacing-md);
+            display: flex;
+            gap: var(--spacing-sm);
+        }
+        .blog-post .card .meta span {
+            background: var(--color-bg-alt);
+            padding: 2px 8px;
+            border-left: 3px solid var(--color-accent);
+        }
+        .blog-post .card p {
+            margin-bottom: var(--spacing-md);
+            color: var(--color-text);
+            line-height: 1.8;
+        }
+        .blog-post .card blockquote {
+            border-left: var(--border-thick);
+            padding-left: var(--spacing-md);
+            margin: var(--spacing-md) 0;
+            color: var(--color-accent-dim);
+            font-style: italic;
+        }
+        .blog-post .card .highlight {
+            background: var(--color-bg-alt);
+            padding: var(--spacing-sm) var(--spacing-md);
+            border: 1px dashed var(--color-accent);
+            margin: var(--spacing-md) 0;
+        }
+        /* ===== FAQ (accordion) ===== */
+        .faq-section {
+            padding: var(--spacing-lg) 0;
+            border-top: 2px solid var(--color-border);
+        }
+        .faq-section h2 {
+            font-family: var(--font-heading);
+            font-size: 2rem;
+            color: var(--color-accent);
+            text-transform: uppercase;
+            letter-spacing: 4px;
+            margin-bottom: var(--spacing-md);
+        }
+        .faq-item {
+            border-bottom: 1px solid var(--color-border);
+            padding: var(--spacing-sm) 0;
+        }
+        .faq-question {
+            font-family: var(--font-heading);
+            font-size: 1.2rem;
+            color: var(--color-text);
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: var(--spacing-sm) 0;
+            text-transform: uppercase;
+        }
+        .faq-question::after {
+            content: '+';
+            font-size: 1.8rem;
+            color: var(--color-accent);
+            transition: transform var(--transition-fast);
+        }
+        .faq-question.active::after {
+            transform: rotate(45deg);
+        }
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease;
+            padding: 0 var(--spacing-sm);
+        }
+        .faq-answer.open {
+            max-height: 300px;
+            padding: var(--spacing-sm) var(--spacing-sm) var(--spacing-md);
+        }
+        .faq-answer p {
+            color: var(--color-text-muted);
+        }
+        /* ===== FOOTER ===== */
+        .footer {
+            background-color: var(--color-header-bg);
+            border-top: var(--border-thick);
+            padding: var(--spacing-lg) 0;
+            text-align: center;
+            color: var(--color-text-muted);
+        }
+        .footer .social-links {
+            display: flex;
+            justify-content: center;
+            gap: var(--spacing-md);
+            margin-bottom: var(--spacing-sm);
+        }
+        .footer .social-links a {
+            color: var(--color-accent);
+            font-size: 1.5rem;
+            border: 1px solid var(--color-border);
+            padding: var(--spacing-xs) var(--spacing-sm);
+            transition: background var(--transition-fast);
+        }
+        .footer .social-links a:hover {
+            background: var(--color-accent-dim);
+        }
+        /* ===== RESPONSIVE ===== */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+            .blog-post .card {
+                padding: var(--spacing-md);
+            }
+            .blog-post .card h2 {
+                font-size: 1.5rem;
+            }
+        }
+        @media (max-width: 480px) {
+            .logo {
+                font-size: 1.2rem;
+            }
+            .header-inner {
+                padding: 0 var(--spacing-sm);
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- HEADER -->
+    <header class="header">
+        <div class="container header-inner">
+            <a href="/" class="logo">화곡<span>셔츠룸</span></a>
+            <button class="hamburger-menu" id="menuToggle" aria-label="메뉴 열기">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
+        </div>
+    </header>
+
+    <!-- NAV OVERLAY -->
+    <nav class="nav-overlay" id="navOverlay">
+        <button class="nav-close" id="navClose" aria-label="메뉴 닫기">✕</button>
+        <ul>
+            <li><a href="/">홈</a></li>
+            <li><a href="/blog/">블로그</a></li>
+            <li><a href="/about/">소개</a></li>
+            <li><a href="/contact/">연락처</a></li>
+        </ul>
+    </nav>
+
+    <!-- HERO -->
+    <section class="hero">
+        <div class="container">
+            <h1>블로그</h1>
+            <p>스트리트의 진짜 목소리. 거침없이, 직접적으로, 규칙을 깨며.</p>
+        </div>
+    </section>
+
+    <!-- BLOG POST -->
+    <section class="blog-post">
+        <div class="container">
+            <article class="card">
+                <h2>도시 정글의 피난처: 화곡 셔츠룸이 브루탈리즘을 새롭게 정의하는 이유</h2>
+                <div class="meta">
+                    <span>2025-03-20</span>
+                    <span>
+</body>
+</html>
