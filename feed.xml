@@ -1,20 +1,20 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
 <channel>
-  <title><![CDATA[마포 화곡 셔츠룸]]></title>
-  <link>https://sf-t3-1779642675702-344.pages.dev</link>
-  <description><![CDATA[마포 힙플레이스 카페 관련 최신 뉴스, 서비스 안내, 리얼 후기 정보를 신속하게 전달하는 공식 RSS 피드입니다.]]></description>
-  <language>ko-KR</language>
-  <pubDate>Thu, 28 May 2026 13:03:15 GMT</pubDate>
-  <lastBuildDate>Thu, 28 May 2026 13:03:15 GMT</lastBuildDate>
-  <atom:link href="https://sf-t3-1779642675702-344.pages.dev/feed.xml" rel="self" type="application/rss+xml" />
+  <title><![CDATA[힙플레이스 카페]]></title>
+  <link>https://sf-t3-1779642675702-344.vercel.app</link>
+  <description><![CDATA[힙플레이스 카페 - 화곡 셔츠룸 관련 최신 소식 및 가이드]]></description>
+  <language>ko</language>
+  <pubDate>Wed, 10 Jun 2026 19:13:32 GMT</pubDate>
+  <lastBuildDate>Wed, 10 Jun 2026 19:13:32 GMT</lastBuildDate>
+  <atom:link href="https://sf-t3-1779642675702-344.vercel.app/feed.xml" rel="self" type="application/rss+xml" />
   
     <item>
-      <title><![CDATA[마포 화곡 셔츠룸 - 공식 홈페이지 오픈 안내]]></title>
-      <link>https://sf-t3-1779642675702-344.pages.dev/</link>
-      <guid isPermaLink="true">https://sf-t3-1779642675702-344.pages.dev/</guid>
-      <description><![CDATA[마포 힙플레이스 카페 관련 최신 뉴스, 서비스 안내, 리얼 후기 정보를 신속하게 전달하는 공식 RSS 피드입니다.]]></description>
-      <pubDate>Thu, 28 May 2026 13:03:15 GMT</pubDate>
+      <title><![CDATA[힙플레이스 카페 해결 방법 총정리 — 전문가가 알려주는 5가지 팁]]></title>
+      <link>https://sf-t3-1779642675702-344.vercel.app/posts/guide-002-vqpwtr.html</link>
+      <guid isPermaLink="true">https://sf-t3-1779642675702-344.vercel.app/posts/guide-002-vqpwtr.html</guid>
+      <description><![CDATA[### 포스트 메타정보포스트 기획 테마: 구체적 니치 콘텐츠 작성 — 글룸헤이븐 클래스 카드 스탯 차이와 밸런스 변경 이유 백링크 지시: 본문 내러티브 속에서 다음 링크를 자연스러운 발견으로 녹여라: 글룸헤이븐 클래스 카드 정보 페이지 함께 보면 좋은 정보 관련 업계 ]]></description>
+      <pubDate>Wed, 10 Jun 2026 00:00:00 GMT</pubDate>
     </item>
 </channel>
 </rss>
